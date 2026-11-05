@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>X TRADING</title>
+<meta name="theme-color" content="#080A09">
+<meta name="description" content="X TRADING - practice trading simulator with virtual money">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('xk_theme')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&text=%E9%98%BF&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<header><div class="top"><span class="logo"><b class='mk'>阿</b>X TRADING</span><span style='display:flex;gap:8px'><span class='av' onclick='theme()' style='cursor:pointer'>◐</span><span class='av' id='av2' onclick='prof()' style='cursor:pointer'>X</span></span></div>
+<div class="idx"><div>NIFTY 50<b id="i0"></b><span id="c0"></span></div><div>SENSEX<b id="i1"></b><span id="c1"></span></div></div><div style='margin-top:9px;font-size:10px;letter-spacing:1.3px;color:#929990'><b style='color:#D7FF00'>●</b> SIMULATED MARKET · VIRTUAL MONEY</div></header>
+<main id="main"></main>
+<nav id="nav"></nav>
+<section id="det"><div class="dh"><button onclick="closeD()" aria-label="Back">←</button><div style="flex:1"><div id="dn" style="font-weight:600"></div><div id="ds" class="lbl"></div></div><div class="r"><div id="dp" class="p" style="font-weight:700"></div><div id="dc" class="c" style="font-size:12px"></div></div></div>
+<div style='flex:1;overflow-y:auto'><div style='height:10px'></div><div class='tf' id='tf'></div><div class='tf' id='tl'></div><div style='position:relative'><canvas id='cv'></canvas></div><div class='ohlc' id='oh'></div><div id='dp2'></div></div>
+<div class="acts"><button class="btn sell" onclick="openO('SELL')">Sell</button><button class="btn buy" onclick="openO('BUY')">Buy</button></div></section>
+<div id="sheet" onclick="if(event.target===this)this.classList.remove('show')"><div class="sh" id="sh"></div></div>
+<div id='splash'><div class='mk' style='width:84px;height:84px;font-size:52px;border-radius:22px;margin:0 0 22px;box-shadow:0 0 40px #D7FF0055'>阿</div><div id='spl'></div><div class='sp-tag'>TRADE SMART. GROW FASTER.</div><div class='sp-bar'><i></i></div></div><div id='lock'></div><div id='busy'><div class='spin'></div><div id='bt'></div></div><div id='login'><div style='display:flex;align-items:center;font-size:28px;font-weight:700;letter-spacing:1px'><b class='mk' style='width:44px;height:44px;font-size:28px;border-radius:12px'>阿</b>X TRADING</div><div style='opacity:.8;margin:6px 0 28px'>Invest and trade, simply</div><input class='fld' id='nm' placeholder='Full name'><input class='fld' id='ph' inputmode='numeric' maxlength='10' placeholder='Mobile number'><input class='fld' id='pin' type='password' inputmode='numeric' maxlength='4' placeholder='4-digit PIN'><button class='btn' id='lbtn' style='background:var(--pri);color:var(--onp)' onclick='login()'>Login</button><div id='ltxt' style='font-size:13px;margin-top:16px;text-align:center;text-decoration:underline;cursor:pointer' onclick='toggleL()'></div><div style='font-size:12px;opacity:.7;margin-top:14px;text-align:center'>Demo trading app · virtual money only</div></div>
+<div id="toast"></div>
+<script src="script.js"></script></body></html>
